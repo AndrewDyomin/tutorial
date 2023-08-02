@@ -1,0 +1,25 @@
+.hero-title-area {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+.hero-title {
+    margin: 0;
+    display: block;
+    color: #000;
+    /* font-family: Helvetica Neue; */
+    font-size: 160%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.9; /* 42.188% */
+    text-transform: uppercase;
+}
+.title-image {
+}
+
+.title-button {
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+}
