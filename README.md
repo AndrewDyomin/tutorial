@@ -1,1 +1,1 @@
-# tutorial
+Tutorial site by Andrew Dyomin
