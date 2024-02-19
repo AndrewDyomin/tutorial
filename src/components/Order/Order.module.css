@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.discription {
+    display: flex;
+    margin-top: 10px;
+}
+
+.orderName {
+    width: calc(100%/3);
+}
+
+.orderDeadline {
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.orderDealer {
+    width: calc(100%/3);
+    text-align: right;
+}

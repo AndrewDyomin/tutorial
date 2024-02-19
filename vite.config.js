@@ -12,5 +12,5 @@ export default defineConfig({
           assets: '/src/assets'
         },
       },
-      base: '/healthy_hub/',
+      base: '/furniture-production-frontend/',
     });
