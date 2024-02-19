@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobileWrapper {
+    flex-direction: column;
+  }
+  
+  .username {
+    font-weight: 700;
+  }
+
+  .logoutButtonMob {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 15px 0 15px;
+    font-weight: 700;
+    color: #2a363b;
+  }

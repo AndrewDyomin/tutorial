@@ -1,45 +1,29 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HeroPage } from 'components/HeroPage/HeroPage';
+import { OurProducts } from 'components/OurProducts/OurProducts';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchAllProducts } from '../redux/products/operations';
 
-const Home = () => {
+  
+  export default function Home() {
 
-// const [ trendList, setTrendList ] = useState([]);
+    const dispatch = useDispatch();
 
-// useEffect(() => {
-//     async function trend () {
-//     const response = await getTrendList();
-//     if (trendList.length === 0) {
-//         setTrendList(response);
-//     };
-//     };
-//     trend();
-    
-// },
-//     [trendList]);
-return (
-    <>
-        {/* <h1>Tranding today</h1>
-        <ul>
-            {trendList.map(movie => (
-                <li key={movie.id}>
-                    <Link to={`/movies/${movie.id}`}>
-                        {movie.poster_path === null ? <img 
-                        src={film}
-                        alt="default"
-                        width='150px'
-                        /> 
-                        : 
-                        <img 
-                        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
-                        alt={`${movie.id}`} 
-                        width='150px'/>}
-                        <p>{movie.title}</p>
-                    </Link>
-                </li>
-            ))}
-        </ul> */}
-    </>
-);
-};
+    useEffect(() => {
+      dispatch(fetchAllProducts());
+    }, [dispatch]);
 
-export default Home;
+    return (
+    <HelmetProvider>
+      <div>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+        <HeroPage />
+        <OurProducts />
+      </div>
+    </HelmetProvider>
+
+    );
+  }
